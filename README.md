@@ -13,7 +13,7 @@ OPENAI_API_KEY=<your secret api key>
 Usage: unprepared <topic...> --model=gpt-4 --images --debug
 
 Arguments:
-  topic            The presentation topic that you were unprepared for.
+  topic            The presentation topic that you are unprepared for.
 
 Options:
   --model [model]  OpenAI model compatible with createChatCompletion() interface. (default: "gpt-3.5-turbo")
@@ -38,7 +38,7 @@ $ unprepared using async/await in javascript
 ```
 
 ```
-$ unprepared ancient roman plumbing --images 
+$ unprepared sleep hygene --images 
 ```
 
 ```

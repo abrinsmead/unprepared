@@ -17,7 +17,7 @@ const { Configuration, OpenAIApi } = require("openai")
 
 program
   .usage('<topic...> --model=gpt-4 --images --debug')
-  .argument('<topic...>', 'The presentation topic that you were unprepared for.')
+  .argument('<topic...>', 'The presentation topic that you are unprepared for.')
   .option('--model [model]', 'OpenAI model compatible with createChatCompletion() interface.', 'gpt-3.5-turbo')
   .option('--images', 'Include Dall-e AI images.', false)
   .option('--debug', 'Debug mode.', false)
@@ -194,6 +194,10 @@ const downloadAndLinkImages = async (presentationObject, outputDirectoryPath) =>
 
 (async function main (topic) {
 
+    if (program.opts().debug) {
+        console.log(appRoot)
+    }
+
     spinner.setSpinnerTitle('Generating content')
 
     const outputDirectoryPath = 'presentation'
@@ -210,7 +214,7 @@ const downloadAndLinkImages = async (presentationObject, outputDirectoryPath) =>
     }
 
     spinner.setSpinnerTitle('Writing output')
-    const template = await fs.readFile(appRoot + '/template.html', { encoding: 'utf8' })
+    const template = await fs.readFile(appRoot + '/node_modules/unprepared/template.html', { encoding: 'utf8' })
     const output = Mustache.render(template, presentationObject)
     
     await fs.mkdir(`./${outputDirectoryPath}`, { recursive: true }, (err) => {

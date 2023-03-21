@@ -1,6 +1,6 @@
 {
   "name": "unprepared",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "Use unprepared and your OpenAI API key to quickly generate a last minute presentation on any topic.",
   "main": "unprepared.js",
   "scripts": {
@@ -19,6 +19,6 @@
   },
   "bin": {
     "unprepared": "./unprepared.js"
-  },  
+  },
   "repository": "github:abrinsmead/unprepared"
 }
