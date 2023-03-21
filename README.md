@@ -45,3 +45,6 @@ $ unprepared ancient roman plumbing --images
 $ unprepared acid house --images --model=gpt-4 
 ```
 
+# To Do
+* Download Dall-e images before they expire 
+* Fix LaTex formatting for single dollar delimited formulas
