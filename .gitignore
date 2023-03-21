@@ -1,0 +1,6 @@
+.env
+todo.md
+.DS_Store
+demo/*
+presentation/*
+node_modules/*
